@@ -1,0 +1,112 @@
+// Ex for if statement
+#include <stdio.h>
+int main()
+{
+    int x = 20;
+    int y = 22;
+    if (x<y)
+    {
+        printf("Variable x is less than y");
+    }
+    return 0;
+}
+
+
+// Ex for if else
+
+#include <stdio.h>
+int main()
+{
+   int age;
+   printf("Enter your age:");
+   scanf("%d",&age);
+   if(age >=18)
+	printf("You are eligible for voting");
+   else
+	printf("You are not eligible for voting");
+   return 0;
+}
+
+//Ex for nested if else statements
+
+#include <stdio.h>
+int main()
+{
+   int var1, var2;
+   printf("Input the value of var1:");
+   scanf("%d", &var1);
+   printf("Input the value of var2:");
+   scanf("%d",&var2);
+   if (var1 != var2)
+   {
+	printf("var1 is not equal to var2\n");
+	//Nested if else
+	if (var1 > var2)
+	{
+		printf("var1 is greater than var2\n");
+	}
+	else
+	{
+		printf("var2 is greater than var1\n");
+	}
+   }
+   else
+   {
+	printf("var1 is equal to var2\n");
+   }
+   return 0;
+}
+Output:
+
+Input the value of var1:12
+Input the value of var2:21
+var1 is not equal to var2
+var2 is greater than var1
+
+
+
+1. Program to Check Even or Odd
+#include <stdio.h>
+int main()
+{
+    int number;
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    // True if the number is perfectly divisible by 2
+    if(number % 2 == 0)
+        printf("%d is even.", number);
+    else
+        printf("%d is odd.", number);
+    return 0;
+}
+
+2. Example: Program to Check Prime Number
+#include <stdio.h>
+int main()
+{
+    int n, i, flag = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    for(i = 2; i <= n/2; ++i)
+    {
+        // condition for nonprime number
+        if(n%i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if (n == 1) 
+    {
+      printf("1 is neither a prime nor a composite number.");
+    }
+    else 
+    {
+        if (flag == 0)
+          printf("%d is a prime number.", n);
+        else
+          printf("%d is not a prime number.", n);
+    }
+    
+    return 0;
+}
